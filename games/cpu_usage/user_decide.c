@@ -6,21 +6,19 @@
 
 int main()
 {
-  int run_time,i,k;
+  int i,k,run,sleep;
   struct timeval start, end;
+  printf("please input the ratio:\n");
+  printf("the runtime occupy:");
+  scanf("%d",&run);
+  printf("the sleeptime occupy:");
+  scanf("%d",&sleep);
   while (true){
-    gettimeofday(&start, NULL);
-    //do {
     k = 0;
-    for (i = 0; i < 6700000; i++){
+    for (i = 0; i < 6800000*run; i++){
       k++;
     }
-    gettimeofday(&end, NULL);
-    run_time = (end.tv_sec - start.tv_sec) * 1000000 + (end.tv_usec - start.tv_usec);
-    //printf("runtime %d", run_time);
-    //}
-    //while (run_time  < SLEEP_TIME);
-    usleep(SLEEP_TIME);
+    usleep(SLEEP_TIME*sleep);
   }
   return 0;
 }
