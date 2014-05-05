@@ -1,15 +1,15 @@
 default: all
 CC=gcc
-
+CFLAGS=-O0
 PROGRAM=half user_decide sin_curve
 
 all: $(PROGRAM)
 half: half.c
-	$(CC) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@
 user_decide: user_decide.c
-	$(CC) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@
 sin_curve: sin_curve.c
-	$(CC) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@
 
 .PHONY: clean
 clean:

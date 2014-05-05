@@ -10,12 +10,16 @@ int main()
   struct timeval start, end;
   while (true){
     gettimeofday(&start, NULL);
+    //do {
     k = 0;
-    for (i = 0; i < 6700000; i++){ //get the number by trying handy
+    for (i = 0; i < 6700000; i++){
       k++;
     }
     gettimeofday(&end, NULL);
     run_time = (end.tv_sec - start.tv_sec) * 1000000 + (end.tv_usec - start.tv_usec);
+    //printf("runtime %d", run_time);
+    //}
+    //while (run_time  < SLEEP_TIME);
     usleep(SLEEP_TIME);
   }
   return 0;
