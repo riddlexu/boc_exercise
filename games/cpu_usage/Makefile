@@ -1,6 +1,6 @@
 default: all
 CC=gcc
-CFLAGS=-O0
+CFLAGS=-O0 -std=c99
 PROGRAM=half user_decide sin_curve
 
 all: $(PROGRAM)

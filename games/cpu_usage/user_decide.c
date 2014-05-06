@@ -2,7 +2,7 @@
 #include<sys/time.h>
 #include<stdbool.h>
 
-#define SLEEP_TIME 20000
+const int SLEEP_TIME = 20000;
 
 int main()
 {
