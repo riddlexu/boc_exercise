@@ -9,7 +9,7 @@ half: half.c
 user_decide: user_decide.c
 	$(CC) $(CFLAGS) $< -o $@
 sin_curve: sin_curve.c
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) -lm $< -o $@
 
 .PHONY: clean
 clean:
